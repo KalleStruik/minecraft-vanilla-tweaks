@@ -9,11 +9,14 @@ import java.io.IOException;
 public class config {
 
     public static boolean TOGGLE_TRAMPLE_ENABLED;
+
     public static boolean CRAFTING_TWEAKS_ENABLED;
     public static boolean CRAFTING_TWEAKS_BETTER_CHEST;
     public static boolean CRAFTING_TWEAKS_NAME_TAG;
     public static boolean CRAFTING_TWEAKS_WOOL_TO_STRING;
     public static boolean CRAFTING_TWEAKS_SADDLE;
+
+    public static boolean SEED_DROP_PLANTING_ENABLED;
 
     public static void load(File file) throws IOException, InvalidConfigurationException {
         if (!file.getParentFile().exists())

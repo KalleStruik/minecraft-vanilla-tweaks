@@ -1,6 +1,7 @@
 package nl.kallestruik.vanillatweaks;
 
 import nl.kallestruik.vanillatweaks.CraftingTweaks.CraftingTweaks;
+import nl.kallestruik.vanillatweaks.SeedDropPlanting.SeedDropPlanting;
 import nl.kallestruik.vanillatweaks.ToggleTrample.CommandToggletrample;
 import nl.kallestruik.vanillatweaks.ToggleTrample.TrampleHandler;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -32,11 +33,9 @@ public final class VanillaTweaks extends JavaPlugin {
              * Throwable tnt with a smaller explosion.
              */
 
-            /**
-             * Seed drop planting
-             *
-             * Seeds dropped on tilled soil will plant themselves after a random amount of time.
-             */
+            if (config.SEED_DROP_PLANTING_ENABLED) {
+                SeedDropPlanting.init(this);
+            }
 
             /**
              * Sign editing

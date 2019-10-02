@@ -8,3 +8,5 @@ crafting-tweaks:
     wool-to-string: true
     saddle: true
 
+seed-drop-planting:
+    enabled: true

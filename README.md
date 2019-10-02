@@ -16,9 +16,18 @@ Currently included:
 - 1 wool (any color) -> 4 string
 - 3 leather + 2 string + 2 iron ingot -> 1 saddle
 
+### Dropped seed planting
+Automatically plants seed dropped on tilled soil.
+Works for:
+- Wheat
+- Beetroot
+- Carrot
+- Potato
+- Melon
+- Pumpkin
+
 ## Planned tweaks
 - Dynamite
-- Seed drop planting
 - Sign editing
 - Armor stand swapping
 - Nether sponge drying
