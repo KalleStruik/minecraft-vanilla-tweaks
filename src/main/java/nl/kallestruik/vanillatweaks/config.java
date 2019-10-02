@@ -9,6 +9,11 @@ import java.io.IOException;
 public class config {
 
     public static boolean TOGGLE_TRAMPLE_ENABLED;
+    public static boolean CRAFTING_TWEAKS_ENABLED;
+    public static boolean CRAFTING_TWEAKS_BETTER_CHEST;
+    public static boolean CRAFTING_TWEAKS_NAME_TAG;
+    public static boolean CRAFTING_TWEAKS_WOOL_TO_STRING;
+    public static boolean CRAFTING_TWEAKS_SADDLE;
 
     public static void load(File file) throws IOException, InvalidConfigurationException {
         if (!file.getParentFile().exists())
@@ -19,6 +24,17 @@ public class config {
         config.load(file);
 
         TOGGLE_TRAMPLE_ENABLED = config.getBoolean("toggle-trample.enabled");
+
+        CRAFTING_TWEAKS_ENABLED = config.getBoolean("crafting-tweaks.enabled");
+        CRAFTING_TWEAKS_BETTER_CHEST = config.getBoolean("crafting-tweaks.better-chest");
+        CRAFTING_TWEAKS_NAME_TAG = config.getBoolean("crafting-tweaks.name-tag");
+        CRAFTING_TWEAKS_WOOL_TO_STRING = config.getBoolean("crafting-tweaks.wool-to-string");
+        CRAFTING_TWEAKS_SADDLE = config.getBoolean("crafting-tweaks.saddle");
+
+
+
+
+
 
     }
 }

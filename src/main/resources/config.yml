@@ -1,2 +1,10 @@
 toggle-trample:
     enabled: true
+
+crafting-tweaks:
+    enabled: true
+    better-chest: true
+    name-tag: true
+    wool-to-string: true
+    saddle: true
+
