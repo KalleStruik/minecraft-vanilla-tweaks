@@ -10,3 +10,6 @@ crafting-tweaks:
 
 seed-drop-planting:
     enabled: true
+
+armor-stand-swapping:
+    enabled: true

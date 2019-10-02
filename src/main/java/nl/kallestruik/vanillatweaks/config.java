@@ -18,6 +18,8 @@ public class config {
 
     public static boolean SEED_DROP_PLANTING_ENABLED;
 
+    public static boolean ARMOR_STAND_SWAPPING_ENABLED;
+
     public static void load(File file) throws IOException, InvalidConfigurationException {
         if (!file.getParentFile().exists())
             file.getParentFile().mkdirs();
@@ -34,10 +36,8 @@ public class config {
         CRAFTING_TWEAKS_WOOL_TO_STRING = config.getBoolean("crafting-tweaks.wool-to-string");
         CRAFTING_TWEAKS_SADDLE = config.getBoolean("crafting-tweaks.saddle");
 
+        SEED_DROP_PLANTING_ENABLED = config.getBoolean("seed-drop-planting.enabled");
 
-
-
-
-
+        ARMOR_STAND_SWAPPING_ENABLED = config.getBoolean("armor-stand-swapping.enabled");
     }
 }

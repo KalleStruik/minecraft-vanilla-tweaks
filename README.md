@@ -26,10 +26,12 @@ Works for:
 - Melon
 - Pumpkin
 
+### Armor stand swapping
+Allow players to shift right-click on any armor stand to swap armor with it.
+
 ## Planned tweaks
 - Dynamite
 - Sign editing
-- Armor stand swapping
 - Nether sponge drying
 
 
