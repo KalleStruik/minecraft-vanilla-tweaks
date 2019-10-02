@@ -1,7 +1,7 @@
 package nl.kallestruik.vanillatweaks;
 
-import nl.kallestruik.vanillatweaks.Commands.CommandToggletrample;
-import nl.kallestruik.vanillatweaks.Handlers.TrampleHandler;
+import nl.kallestruik.vanillatweaks.ToggleTrample.CommandToggletrample;
+import nl.kallestruik.vanillatweaks.ToggleTrample.TrampleHandler;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.plugin.java.JavaPlugin;
 

@@ -1,4 +1,4 @@
-package nl.kallestruik.vanillatweaks.Handlers;
+package nl.kallestruik.vanillatweaks.ToggleTrample;
 
 import org.bukkit.Material;
 import org.bukkit.configuration.InvalidConfigurationException;

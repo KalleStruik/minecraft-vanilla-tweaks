@@ -1,6 +1,5 @@
-package nl.kallestruik.vanillatweaks.Commands;
+package nl.kallestruik.vanillatweaks.ToggleTrample;
 
-import nl.kallestruik.vanillatweaks.Handlers.TrampleHandler;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
