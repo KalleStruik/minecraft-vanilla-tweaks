@@ -1,0 +1,6 @@
+name: VanillaTweaks
+version: @version@
+main: nl.kallestruik.vanillatweaks.VanillaTweaks
+api-version: 1.13
+commands:
+    toggeltrample:
