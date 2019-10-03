@@ -21,7 +21,7 @@ public class ArmorStandSwappingHandler implements Listener {
 
                 if (standEquipment != null && playerEquipment != null) {
                     ItemStack playerHelmet = playerEquipment.getHelmet();
-                    ItemStack playerChestpalte = playerEquipment.getChestplate();
+                    ItemStack playerChestplate = playerEquipment.getChestplate();
                     ItemStack playerLeggings = playerEquipment.getLeggings();
                     ItemStack playerBoots = playerEquipment.getBoots();
 
@@ -31,7 +31,7 @@ public class ArmorStandSwappingHandler implements Listener {
                     player.getInventory().setBoots(standEquipment.getBoots());
 
                     armorStand.setHelmet(playerHelmet);
-                    armorStand.setChestplate(playerChestpalte);
+                    armorStand.setChestplate(playerChestplate);
                     armorStand.setLeggings(playerLeggings);
                     armorStand.setBoots(playerBoots);
                 }
