@@ -20,34 +20,22 @@ public class SeedDropPlanting {
                         if (b.getType() == Material.FARMLAND && above.getType() == Material.AIR) {
                             switch (item.getItemStack().getType()) {
                                 case WHEAT_SEEDS:
-                                    above.setType(Material.WHEAT);
-                                    world.spawnParticle(Particle.VILLAGER_HAPPY, item.getLocation(), 10);
-                                    entity.remove();
+                                    plantSeed(item, world, above, Material.WHEAT);
                                     break;
                                 case BEETROOT_SEEDS:
-                                    above.setType(Material.BEETROOTS);
-                                    world.spawnParticle(Particle.VILLAGER_HAPPY, item.getLocation(), 10);
-                                    entity.remove();
+                                    plantSeed(item, world, above, Material.BEETROOTS);
                                     break;
                                 case MELON_SEEDS:
-                                    above.setType(Material.MELON_STEM);
-                                    world.spawnParticle(Particle.VILLAGER_HAPPY, item.getLocation(), 10);
-                                    entity.remove();
+                                    plantSeed(item, world, above, Material.MELON_STEM);
                                     break;
                                 case PUMPKIN_SEEDS:
-                                    above.setType(Material.PUMPKIN_STEM);
-                                    world.spawnParticle(Particle.VILLAGER_HAPPY, item.getLocation(), 10);
-                                    entity.remove();
+                                    plantSeed(item, world, above, Material.PUMPKIN_STEM);
                                     break;
                                 case POTATO:
-                                    above.setType(Material.POTATOES);
-                                    world.spawnParticle(Particle.VILLAGER_HAPPY, item.getLocation(), 10);
-                                    entity.remove();
+                                    plantSeed(item, world, above, Material.POTATOES);
                                     break;
                                 case CARROT:
-                                    above.setType(Material.CARROTS);
-                                    world.spawnParticle(Particle.VILLAGER_HAPPY, item.getLocation(), 10);
-                                    entity.remove();
+                                    plantSeed(item, world, above, Material.CARROTS);
                                     break;
                             }
                         }
@@ -56,5 +44,15 @@ public class SeedDropPlanting {
                 }
             }
         }, 20 * 10, 20 * 10);
+    }
+
+    private static void plantSeed(Item entity, World world, Block block, Material material) {
+        block.setType(material);
+        world.spawnParticle(Particle.VILLAGER_HAPPY, entity.getLocation(), 10);
+        if (entity.getItemStack().getAmount() == 1) {
+            entity.remove();
+        } else {
+            entity.getItemStack().setAmount(entity.getItemStack().getAmount() - 1);
+        }
     }
 }
