@@ -13,3 +13,6 @@ seed-drop-planting:
 
 armor-stand-swapping:
     enabled: true
+
+nether-sponge-drying:
+    enabled: true

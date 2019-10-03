@@ -15,7 +15,7 @@ public class util {
     }
 
     public static void ExportResource(String resourceName, File output) {
-        try (InputStream stream = VanillaTweaks.class.getResourceAsStream(resourceName); OutputStream resStreamOut = new FileOutputStream(output)) {
+        try (InputStream stream = VanillaTweaks.class.getResourceAsStream("/" + resourceName); OutputStream resStreamOut = new FileOutputStream(output)) {
             if (stream == null) {
                 throw new Exception("Cannot get resource \"" + resourceName + "\" from Jar file.");
             }

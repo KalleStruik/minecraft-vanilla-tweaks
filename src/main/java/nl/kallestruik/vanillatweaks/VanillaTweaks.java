@@ -2,6 +2,7 @@ package nl.kallestruik.vanillatweaks;
 
 import nl.kallestruik.vanillatweaks.ArmorStandSwapping.ArmorStandSwappingHandler;
 import nl.kallestruik.vanillatweaks.CraftingTweaks.CraftingTweaks;
+import nl.kallestruik.vanillatweaks.NetherSpongeDrying.NetherSpongeHandler;
 import nl.kallestruik.vanillatweaks.SeedDropPlanting.SeedDropPlanting;
 import nl.kallestruik.vanillatweaks.ToggleTrample.CommandToggletrample;
 import nl.kallestruik.vanillatweaks.ToggleTrample.TrampleHandler;
@@ -38,22 +39,13 @@ public final class VanillaTweaks extends JavaPlugin {
                 SeedDropPlanting.init(this);
             }
 
-            /**
-             * Sign editing
-             *
-             * Shift right-click on a sign to edit it.
-             */
-
             if (config.ARMOR_STAND_SWAPPING_ENABLED) {
                 getServer().getPluginManager().registerEvents(new ArmorStandSwappingHandler(), this);
             }
 
-            /**
-             * Sponges in nether dry instantly
-             *
-             * Kind of what is says.
-             */
-
+            if (config.NETHER_SPONGE_DRYING_ENABLED) {
+                getServer().getPluginManager().registerEvents(new NetherSpongeHandler(), this);
+            }
 
         } catch (IOException | InvalidConfigurationException | NullPointerException e) {
             util.printException(e);

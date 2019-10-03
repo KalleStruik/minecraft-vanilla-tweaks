@@ -20,6 +20,8 @@ public class config {
 
     public static boolean ARMOR_STAND_SWAPPING_ENABLED;
 
+    public static boolean NETHER_SPONGE_DRYING_ENABLED;
+
     public static void load(File file) throws IOException, InvalidConfigurationException {
         if (!file.getParentFile().exists())
             file.getParentFile().mkdirs();
@@ -39,5 +41,7 @@ public class config {
         SEED_DROP_PLANTING_ENABLED = config.getBoolean("seed-drop-planting.enabled");
 
         ARMOR_STAND_SWAPPING_ENABLED = config.getBoolean("armor-stand-swapping.enabled");
+
+        NETHER_SPONGE_DRYING_ENABLED = config.getBoolean("nether-sponge-drying.enabled");
     }
 }

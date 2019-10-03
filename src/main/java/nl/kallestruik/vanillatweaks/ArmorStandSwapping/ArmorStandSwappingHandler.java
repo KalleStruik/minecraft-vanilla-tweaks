@@ -6,6 +6,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractAtEntityEvent;
 import org.bukkit.inventory.EntityEquipment;
+import org.bukkit.inventory.ItemStack;
 
 public class ArmorStandSwappingHandler implements Listener {
 
@@ -19,12 +20,20 @@ public class ArmorStandSwappingHandler implements Listener {
                 EntityEquipment playerEquipment = player.getEquipment();
 
                 if (standEquipment != null && playerEquipment != null) {
-                    armorStand.setHelmet(playerEquipment.getHelmet());
-                    armorStand.setChestplate(playerEquipment.getChestplate());
-                    armorStand.setLeggings(playerEquipment.getLeggings());
-                    armorStand.setBoots(playerEquipment.getBoots());
+                    ItemStack playerHelmet = playerEquipment.getHelmet();
+                    ItemStack playerChestpalte = playerEquipment.getChestplate();
+                    ItemStack playerLeggings = playerEquipment.getLeggings();
+                    ItemStack playerBoots = playerEquipment.getBoots();
 
-                    player.getInventory().setArmorContents(standEquipment.getArmorContents());
+                    player.getInventory().setHelmet(standEquipment.getHelmet());
+                    player.getInventory().setChestplate(standEquipment.getChestplate());
+                    player.getInventory().setLeggings(standEquipment.getLeggings());
+                    player.getInventory().setBoots(standEquipment.getBoots());
+
+                    armorStand.setHelmet(playerHelmet);
+                    armorStand.setChestplate(playerChestpalte);
+                    armorStand.setLeggings(playerLeggings);
+                    armorStand.setBoots(playerBoots);
                 }
 
                 event.setCancelled(true);

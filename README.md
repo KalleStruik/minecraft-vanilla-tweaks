@@ -29,9 +29,11 @@ Works for:
 ### Armor stand swapping
 Allow players to shift right-click on any armor stand to swap armor with it.
 
+### Nether sponge drying
+Instantly dry wet sponges when they are placed in the nether.
+
 ## Planned tweaks
 - Dynamite
 - Sign editing
-- Nether sponge drying
 
 
