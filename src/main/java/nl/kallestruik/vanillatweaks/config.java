@@ -15,6 +15,8 @@ public class config {
     public static boolean CRAFTING_TWEAKS_NAME_TAG;
     public static boolean CRAFTING_TWEAKS_WOOL_TO_STRING;
     public static boolean CRAFTING_TWEAKS_SADDLE;
+    public static boolean CRAFTING_TWEAKS_PACKED_ICE;
+    public static boolean CRAFTING_TWEAKS_ICE;
 
     public static boolean SEED_DROP_PLANTING_ENABLED;
 
@@ -37,6 +39,8 @@ public class config {
         CRAFTING_TWEAKS_NAME_TAG = config.getBoolean("crafting-tweaks.name-tag");
         CRAFTING_TWEAKS_WOOL_TO_STRING = config.getBoolean("crafting-tweaks.wool-to-string");
         CRAFTING_TWEAKS_SADDLE = config.getBoolean("crafting-tweaks.saddle");
+        CRAFTING_TWEAKS_PACKED_ICE = config.getBoolean("crafting-tweaks.packed-ice");
+        CRAFTING_TWEAKS_ICE = config.getBoolean("crafting-tweaks.ice");
 
         SEED_DROP_PLANTING_ENABLED = config.getBoolean("seed-drop-planting.enabled");
 

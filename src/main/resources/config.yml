@@ -7,6 +7,8 @@ crafting-tweaks:
     name-tag: true
     wool-to-string: true
     saddle: true
+    packed-ice: true
+    ice: true
 
 seed-drop-planting:
     enabled: true

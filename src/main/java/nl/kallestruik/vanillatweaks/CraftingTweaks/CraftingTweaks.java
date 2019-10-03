@@ -41,10 +41,23 @@ public class CraftingTweaks {
         saddleRecipe.setIngredient('S', Material.STRING);
         saddleRecipe.setIngredient('I', Material.IRON_INGOT);
 
+        // Blue ice -> 9 packed ice
+        NamespacedKey packedIceKey = new NamespacedKey(plugin, "packed_ice");
+        ShapelessRecipe packedIceRecipe = new ShapelessRecipe(packedIceKey, new ItemStack(Material.PACKED_ICE, 9));
+        packedIceRecipe.addIngredient(Material.BLUE_ICE);
+
+        // Packed ice -> 9 ice
+        NamespacedKey iceKey = new NamespacedKey(plugin, "ice");
+        ShapelessRecipe iceRecipe = new ShapelessRecipe(iceKey, new ItemStack(Material.ICE, 9));
+        packedIceRecipe.addIngredient(Material.PACKED_ICE);
+
         // Add recipes
         if (config.CRAFTING_TWEAKS_BETTER_CHEST) plugin.getServer().addRecipe(chestRecipe);
         if (config.CRAFTING_TWEAKS_NAME_TAG) plugin.getServer().addRecipe(nametagRecipe);
         if (config.CRAFTING_TWEAKS_WOOL_TO_STRING) plugin.getServer().addRecipe(stringRecipe);
         if (config.CRAFTING_TWEAKS_SADDLE) plugin.getServer().addRecipe(saddleRecipe);
+        if (config.CRAFTING_TWEAKS_PACKED_ICE) plugin.getServer().addRecipe(packedIceRecipe);
+        if (config.CRAFTING_TWEAKS_ICE) plugin.getServer().addRecipe(iceRecipe);
+
     }
 }
