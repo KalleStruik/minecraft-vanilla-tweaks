@@ -17,7 +17,6 @@ build:
   stage: build
   script:
     - ./gradlew build
-    - echo "$(ls $(pwd)./gradle)"
   artifacts:
     paths:
       - build/libs/*.jar
