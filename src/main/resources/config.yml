@@ -10,6 +10,7 @@ crafting-tweaks:
     packed-ice: true
     ice: true
     dragons-breath: true
+    sponge: true
 
 seed-drop-planting:
     enabled: true

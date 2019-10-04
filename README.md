@@ -18,6 +18,7 @@ Currently included:
 - 1 blue ice -> 9 packed ice
 - 1 packed ice -> 9 ice
 - 3 glass + 1 popped chorus fruit -> 3 dragons breath
+- 8 kelp + 1 yellow dye -> 1 sponge
 
 ### Dropped seed planting
 Automatically plants seed dropped on tilled soil.

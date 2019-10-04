@@ -58,6 +58,16 @@ public class CraftingTweaks {
         dragonBreathRecipe.setIngredient('G', Material.GLASS);
         dragonBreathRecipe.setIngredient('C', Material.POPPED_CHORUS_FRUIT);
 
+        // Sponge Block
+        NamespacedKey spongeKey = new NamespacedKey(plugin, "sponge");
+        ShapedRecipe spongeRecipe = new ShapedRecipe(spongeKey, new ItemStack(Material.SPONGE));
+        spongeRecipe.shape("KKK","KDK","KKK");
+        spongeRecipe.setIngredient('K', Material.KELP);
+        spongeRecipe.setIngredient('D', Material.YELLOW_DYE);
+
+
+
+
         // Add recipes
         if (config.CRAFTING_TWEAKS_BETTER_CHEST) plugin.getServer().addRecipe(chestRecipe);
         if (config.CRAFTING_TWEAKS_NAME_TAG) plugin.getServer().addRecipe(nametagRecipe);
@@ -66,5 +76,6 @@ public class CraftingTweaks {
         if (config.CRAFTING_TWEAKS_PACKED_ICE) plugin.getServer().addRecipe(packedIceRecipe);
         if (config.CRAFTING_TWEAKS_ICE) plugin.getServer().addRecipe(iceRecipe);
         if (config.CRAFTING_TWEAKS_DRAGONS_BREATH) plugin.getServer().addRecipe(dragonBreathRecipe);
+        if (config.CRAFTING_TWEAKS_SPONGE) plugin.getServer().addRecipe(spongeRecipe);
     }
 }
