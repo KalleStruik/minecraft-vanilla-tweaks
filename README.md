@@ -15,6 +15,8 @@ Currently included:
 - 2 paper + 1 iron ingot -> 1 name tag
 - 1 wool (any color) -> 4 string
 - 3 leather + 2 string + 2 iron ingot -> 1 saddle
+- 1 blue ice -> 9 packed ice
+- 1 packed ice -> 9 ice
 
 ### Dropped seed planting
 Automatically plants seed dropped on tilled soil.
@@ -31,6 +33,9 @@ Allow players to shift right-click on any armor stand to swap armor with it.
 
 ### Nether sponge drying
 Instantly dry wet sponges when they are placed in the nether.
+
+### Hoe harvesting
+When breaking crops with a hoe you break a range around them. This drastically speeds up manual harvesting of crop farms.
 
 ## Planned tweaks
 - Dynamite

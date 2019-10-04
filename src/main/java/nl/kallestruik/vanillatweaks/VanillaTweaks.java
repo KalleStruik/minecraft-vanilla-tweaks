@@ -2,6 +2,7 @@ package nl.kallestruik.vanillatweaks;
 
 import nl.kallestruik.vanillatweaks.ArmorStandSwapping.ArmorStandSwappingHandler;
 import nl.kallestruik.vanillatweaks.CraftingTweaks.CraftingTweaks;
+import nl.kallestruik.vanillatweaks.HoeHarvesting.HoeHarvestingHandler;
 import nl.kallestruik.vanillatweaks.NetherSpongeDrying.NetherSpongeHandler;
 import nl.kallestruik.vanillatweaks.SeedDropPlanting.SeedDropPlanting;
 import nl.kallestruik.vanillatweaks.ToggleTrample.CommandToggletrample;
@@ -45,6 +46,10 @@ public final class VanillaTweaks extends JavaPlugin {
 
             if (config.NETHER_SPONGE_DRYING_ENABLED) {
                 getServer().getPluginManager().registerEvents(new NetherSpongeHandler(), this);
+            }
+
+            if (config.HOE_HARVESTING_ENABLED) {
+                getServer().getPluginManager().registerEvents(new HoeHarvestingHandler(), this);
             }
 
         } catch (IOException | InvalidConfigurationException | NullPointerException e) {

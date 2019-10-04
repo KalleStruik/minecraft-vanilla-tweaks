@@ -18,3 +18,12 @@ armor-stand-swapping:
 
 nether-sponge-drying:
     enabled: true
+
+hoe-harvesting:
+    enabled: true
+    ranges:
+        wood: 1
+        stone: 1
+        iron: 1
+        gold: 1
+        diamond: 2

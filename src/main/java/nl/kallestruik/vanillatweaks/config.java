@@ -24,6 +24,13 @@ public class config {
 
     public static boolean NETHER_SPONGE_DRYING_ENABLED;
 
+    public static boolean HOE_HARVESTING_ENABLED;
+    public static int HOE_HARVESTING_RANGE_WOOD;
+    public static int HOE_HARVESTING_RANGE_STONE;
+    public static int HOE_HARVESTING_RANGE_IRON;
+    public static int HOE_HARVESTING_RANGE_GOLD;
+    public static int HOE_HARVESTING_RANGE_DIAMOND;
+
     public static void load(File file) throws IOException, InvalidConfigurationException {
         if (!file.getParentFile().exists())
             file.getParentFile().mkdirs();
@@ -47,5 +54,14 @@ public class config {
         ARMOR_STAND_SWAPPING_ENABLED = config.getBoolean("armor-stand-swapping.enabled");
 
         NETHER_SPONGE_DRYING_ENABLED = config.getBoolean("nether-sponge-drying.enabled");
+
+        HOE_HARVESTING_ENABLED = config.getBoolean("hoe-harvesting.enabled");
+        HOE_HARVESTING_RANGE_WOOD = config.getInt("hoe-harvesting.ranges.wood");
+        HOE_HARVESTING_RANGE_STONE = config.getInt("hoe-harvesting.ranges.stone");
+        HOE_HARVESTING_RANGE_IRON = config.getInt("hoe-harvesting.ranges.iron");
+        HOE_HARVESTING_RANGE_GOLD = config.getInt("hoe-harvesting.ranges.gold");
+        HOE_HARVESTING_RANGE_DIAMOND = config.getInt("hoe-harvesting.ranges.diamond");
+
+
     }
 }
