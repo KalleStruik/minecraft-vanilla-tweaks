@@ -17,6 +17,7 @@ Currently included:
 - 3 leather + 2 string + 2 iron ingot -> 1 saddle
 - 1 blue ice -> 9 packed ice
 - 1 packed ice -> 9 ice
+- 3 glass + 1 popped chorus fruit -> 3 dragons breath
 
 ### Dropped seed planting
 Automatically plants seed dropped on tilled soil.
