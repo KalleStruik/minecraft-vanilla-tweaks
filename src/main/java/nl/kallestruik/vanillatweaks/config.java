@@ -17,6 +17,7 @@ public class config {
     public static boolean CRAFTING_TWEAKS_SADDLE;
     public static boolean CRAFTING_TWEAKS_PACKED_ICE;
     public static boolean CRAFTING_TWEAKS_ICE;
+    public static boolean CRAFTING_TWEAKS_DRAGONS_BREATH;
 
     public static boolean SEED_DROP_PLANTING_ENABLED;
 
@@ -48,6 +49,7 @@ public class config {
         CRAFTING_TWEAKS_SADDLE = config.getBoolean("crafting-tweaks.saddle");
         CRAFTING_TWEAKS_PACKED_ICE = config.getBoolean("crafting-tweaks.packed-ice");
         CRAFTING_TWEAKS_ICE = config.getBoolean("crafting-tweaks.ice");
+        CRAFTING_TWEAKS_DRAGONS_BREATH = config.getBoolean("crafting-tweaks.dragons-breath");
 
         SEED_DROP_PLANTING_ENABLED = config.getBoolean("seed-drop-planting.enabled");
 

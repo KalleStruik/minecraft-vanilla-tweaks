@@ -9,6 +9,7 @@ crafting-tweaks:
     saddle: true
     packed-ice: true
     ice: true
+    dragons-breath: true
 
 seed-drop-planting:
     enabled: true

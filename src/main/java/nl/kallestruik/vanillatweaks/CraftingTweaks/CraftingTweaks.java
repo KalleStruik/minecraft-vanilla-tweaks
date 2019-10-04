@@ -49,7 +49,14 @@ public class CraftingTweaks {
         // Packed ice -> 9 ice
         NamespacedKey iceKey = new NamespacedKey(plugin, "ice");
         ShapelessRecipe iceRecipe = new ShapelessRecipe(iceKey, new ItemStack(Material.ICE, 9));
-        packedIceRecipe.addIngredient(Material.PACKED_ICE);
+        iceRecipe.addIngredient(Material.PACKED_ICE);
+
+        // Dragons breath
+        NamespacedKey dragonBreathKey = new NamespacedKey(plugin, "dragon_breath");
+        ShapedRecipe dragonBreathRecipe = new ShapedRecipe(dragonBreathKey, new ItemStack(Material.DRAGON_BREATH, 3));
+        dragonBreathRecipe.shape("GCG", " G ");
+        dragonBreathRecipe.setIngredient('G', Material.GLASS);
+        dragonBreathRecipe.setIngredient('C', Material.POPPED_CHORUS_FRUIT);
 
         // Add recipes
         if (config.CRAFTING_TWEAKS_BETTER_CHEST) plugin.getServer().addRecipe(chestRecipe);
@@ -58,6 +65,6 @@ public class CraftingTweaks {
         if (config.CRAFTING_TWEAKS_SADDLE) plugin.getServer().addRecipe(saddleRecipe);
         if (config.CRAFTING_TWEAKS_PACKED_ICE) plugin.getServer().addRecipe(packedIceRecipe);
         if (config.CRAFTING_TWEAKS_ICE) plugin.getServer().addRecipe(iceRecipe);
-
+        if (config.CRAFTING_TWEAKS_DRAGONS_BREATH) plugin.getServer().addRecipe(dragonBreathRecipe);
     }
 }

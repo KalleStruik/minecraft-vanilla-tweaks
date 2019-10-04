@@ -52,6 +52,8 @@ public final class VanillaTweaks extends JavaPlugin {
                 getServer().getPluginManager().registerEvents(new HoeHarvestingHandler(), this);
             }
 
+
+
         } catch (IOException | InvalidConfigurationException | NullPointerException e) {
             util.printException(e);
         }
