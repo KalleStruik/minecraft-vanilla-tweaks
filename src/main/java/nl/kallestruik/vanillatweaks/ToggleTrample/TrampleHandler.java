@@ -19,7 +19,7 @@ import java.util.UUID;
 
 public class TrampleHandler implements Listener {
 
-    public static HashSet<UUID> trampleEnabled = new HashSet<>();
+    static HashSet<UUID> trampleEnabled = new HashSet<>();
 
     @EventHandler
     public void onBlockBreak(EntityChangeBlockEvent event) {
@@ -43,6 +43,7 @@ public class TrampleHandler implements Listener {
             event.setCancelled(true);
     }
 
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     public static void loadTrampleEnabled(File file) throws IOException, InvalidConfigurationException {
         file.getParentFile().mkdirs();
         file.createNewFile();
@@ -55,6 +56,7 @@ public class TrampleHandler implements Listener {
 
     }
 
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     public static void saveTrampleEnabled(File file) throws IOException, InvalidConfigurationException {
         file.getParentFile().mkdirs();
         file.createNewFile();

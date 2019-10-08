@@ -6,6 +6,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import java.io.File;
 import java.io.IOException;
 
+@SuppressWarnings({"WeakerAccess", "ResultOfMethodCallIgnored"})
 public class config {
 
     public static boolean TOGGLE_TRAMPLE_ENABLED;
@@ -32,6 +33,8 @@ public class config {
     public static int HOE_HARVESTING_RANGE_IRON;
     public static int HOE_HARVESTING_RANGE_GOLD;
     public static int HOE_HARVESTING_RANGE_DIAMOND;
+
+    public static boolean LILYPAD_GROWING_ENABLED;
 
     public static void load(File file) throws IOException, InvalidConfigurationException {
         if (!file.getParentFile().exists())
@@ -66,6 +69,7 @@ public class config {
         HOE_HARVESTING_RANGE_GOLD = config.getInt("hoe-harvesting.ranges.gold");
         HOE_HARVESTING_RANGE_DIAMOND = config.getInt("hoe-harvesting.ranges.diamond");
 
+        LILYPAD_GROWING_ENABLED = config.getBoolean("lilypad-growing.enabled");
 
     }
 }

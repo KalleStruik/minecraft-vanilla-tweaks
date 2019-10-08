@@ -29,3 +29,6 @@ hoe-harvesting:
         iron: 1
         gold: 1
         diamond: 2
+
+lilypad-growing:
+    enabled: true
