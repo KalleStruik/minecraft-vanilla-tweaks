@@ -68,10 +68,10 @@ public class CraftingTweaks {
         // Dispenser Alternative Recipe
         NamespacedKey dispenserKey = new NamespacedKey(plugin, "dispenser");
         ShapedRecipe dispenserRecipe = new ShapedRecipe(dispenserKey, new ItemStack(Material.DISPENSER));
-        spongeRecipe.shape(" TS","TDS"," TS");
-        spongeRecipe.setIngredient('T', Material.STICK);
-        spongeRecipe.setIngredient('D', Material.DROPPER);
-        spongeRecipe.setIngredient('S', Material.STRING);
+        dispenserRecipe.shape(" TS","TDS"," TS");
+        dispenserRecipe.setIngredient('T', Material.STICK);
+        dispenserRecipe.setIngredient('D', Material.DROPPER);
+        dispenserRecipe.setIngredient('S', Material.STRING);
 
 
 
