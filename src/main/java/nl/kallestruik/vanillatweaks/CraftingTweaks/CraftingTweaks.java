@@ -65,6 +65,13 @@ public class CraftingTweaks {
         spongeRecipe.setIngredient('K', Material.KELP);
         spongeRecipe.setIngredient('D', Material.YELLOW_DYE);
 
+        // Dispenser Alternative Recipe
+        NamespacedKey dispenserKey = new NamespacedKey(plugin, "dispenser");
+        ShapedRecipe dispenserRecipe = new ShapedRecipe(dispenserKey, new ItemStack(Material.DISPENSER));
+        spongeRecipe.shape(" TS","TDS"," TS");
+        spongeRecipe.setIngredient('T', Material.STICK);
+        spongeRecipe.setIngredient('D', Material.DROPPER);
+        spongeRecipe.setIngredient('S', Material.STRING);
 
 
 
@@ -77,5 +84,6 @@ public class CraftingTweaks {
         if (config.CRAFTING_TWEAKS_ICE) plugin.getServer().addRecipe(iceRecipe);
         if (config.CRAFTING_TWEAKS_DRAGONS_BREATH) plugin.getServer().addRecipe(dragonBreathRecipe);
         if (config.CRAFTING_TWEAKS_SPONGE) plugin.getServer().addRecipe(spongeRecipe);
+        if (config.CRAFTING_TWEAKS_DISPENSER) plugin.getServer().addRecipe((dispenserRecipe));
     }
 }
