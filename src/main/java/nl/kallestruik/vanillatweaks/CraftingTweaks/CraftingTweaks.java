@@ -84,6 +84,6 @@ public class CraftingTweaks {
         if (config.CRAFTING_TWEAKS_ICE) plugin.getServer().addRecipe(iceRecipe);
         if (config.CRAFTING_TWEAKS_DRAGONS_BREATH) plugin.getServer().addRecipe(dragonBreathRecipe);
         if (config.CRAFTING_TWEAKS_SPONGE) plugin.getServer().addRecipe(spongeRecipe);
-        if (config.CRAFTING_TWEAKS_DISPENSER) plugin.getServer().addRecipe((dispenserRecipe));
+        if (config.CRAFTING_TWEAKS_DISPENSER) plugin.getServer().addRecipe(dispenserRecipe);
     }
 }
