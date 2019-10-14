@@ -6,6 +6,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import java.io.File;
 import java.io.IOException;
 
+@SuppressWarnings({"WeakerAccess", "ResultOfMethodCallIgnored"})
 public class config {
 
     public static boolean TOGGLE_TRAMPLE_ENABLED;
@@ -34,6 +35,8 @@ public class config {
     public static int HOE_HARVESTING_RANGE_GOLD;
     public static int HOE_HARVESTING_RANGE_DIAMOND;
 
+    public static boolean LILYPAD_GROWING_ENABLED;
+
     public static void load(File file) throws IOException, InvalidConfigurationException {
         if (!file.getParentFile().exists())
             file.getParentFile().mkdirs();
@@ -53,7 +56,7 @@ public class config {
         CRAFTING_TWEAKS_ICE = config.getBoolean("crafting-tweaks.ice");
         CRAFTING_TWEAKS_DRAGONS_BREATH = config.getBoolean("crafting-tweaks.dragons-breath");
         CRAFTING_TWEAKS_SPONGE = config.getBoolean("crafting-tweaks.sponge");
-        CRAFTING_TWEAKS_DISPENSER = config.getBoolean("crafting-tweak.dispenser");
+        CRAFTING_TWEAKS_DISPENSER = config.getBoolean("crafting-tweaks.dispenser");
 
         SEED_DROP_PLANTING_ENABLED = config.getBoolean("seed-drop-planting.enabled");
 
@@ -68,6 +71,7 @@ public class config {
         HOE_HARVESTING_RANGE_GOLD = config.getInt("hoe-harvesting.ranges.gold");
         HOE_HARVESTING_RANGE_DIAMOND = config.getInt("hoe-harvesting.ranges.diamond");
 
+        LILYPAD_GROWING_ENABLED = config.getBoolean("lilypad-growing.enabled");
 
     }
 }

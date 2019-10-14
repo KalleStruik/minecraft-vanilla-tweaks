@@ -3,6 +3,7 @@ package nl.kallestruik.vanillatweaks;
 import nl.kallestruik.vanillatweaks.ArmorStandSwapping.ArmorStandSwappingHandler;
 import nl.kallestruik.vanillatweaks.CraftingTweaks.CraftingTweaks;
 import nl.kallestruik.vanillatweaks.HoeHarvesting.HoeHarvestingHandler;
+import nl.kallestruik.vanillatweaks.LilypadGrowing.LilypadGrowingHandler;
 import nl.kallestruik.vanillatweaks.NetherSpongeDrying.NetherSpongeHandler;
 import nl.kallestruik.vanillatweaks.SeedDropPlanting.SeedDropPlanting;
 import nl.kallestruik.vanillatweaks.ToggleTrample.CommandToggletrample;
@@ -12,6 +13,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.*;
 
+@SuppressWarnings("ConstantConditions")
 public final class VanillaTweaks extends JavaPlugin {
 
     @Override
@@ -30,12 +32,6 @@ public final class VanillaTweaks extends JavaPlugin {
                 CraftingTweaks.init(this);
             }
 
-            /**
-             * Dynamite
-             *
-             * Throwable tnt with a smaller explosion.
-             */
-
             if (config.SEED_DROP_PLANTING_ENABLED) {
                 SeedDropPlanting.init(this);
             }
@@ -50,6 +46,10 @@ public final class VanillaTweaks extends JavaPlugin {
 
             if (config.HOE_HARVESTING_ENABLED) {
                 getServer().getPluginManager().registerEvents(new HoeHarvestingHandler(), this);
+            }
+
+            if (config.LILYPAD_GROWING_ENABLED) {
+                getServer().getPluginManager().registerEvents(new LilypadGrowingHandler(), this);
             }
 
 

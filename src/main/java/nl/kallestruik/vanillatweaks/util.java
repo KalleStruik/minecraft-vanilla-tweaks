@@ -1,11 +1,17 @@
 package nl.kallestruik.vanillatweaks;
 
+import org.bukkit.util.Vector;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Random;
 
+@SuppressWarnings("WeakerAccess")
 public class util {
+
+    private static final Random random = new Random();
 
     public static void printException(Exception e) {
         System.err.println("-------------------------------------------------------------------------------------");
@@ -28,5 +34,16 @@ public class util {
         } catch (Exception ex) {
             util.printException(ex);
         }
+    }
+
+    public static Vector getRandomLocationOffset(int min, int max, boolean height) {
+        Vector vec;
+        if (height)
+            vec = new Vector(min + random.nextInt(max - min), min + random.nextInt(max - min), min + random.nextInt(max - min));
+        else
+            vec = new Vector(min + random.nextInt(max - min), 0, min + random.nextInt(max - min));
+
+        vec.multiply(new Vector(random.nextBoolean() ? -1 : 1, random.nextBoolean() ? -1 : 1, random.nextBoolean() ? -1 : 1));
+        return vec;
     }
 }

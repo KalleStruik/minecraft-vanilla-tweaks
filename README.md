@@ -40,6 +40,9 @@ Instantly dry wet sponges when they are placed in the nether.
 ### Hoe harvesting
 When breaking crops with a hoe you break a range around them. This drastically speeds up manual harvesting of crop farms.
 
+### Lily pad growing
+When right-clicking a lily pad with bone meal it wil grow new lily pads around the one that was clicked.
+
 ## Planned tweaks
 - Dynamite
 - Sign editing
