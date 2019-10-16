@@ -20,6 +20,7 @@ Currently included:
 - 3 glass + 1 popped chorus fruit -> 3 dragons breath
 - 8 kelp + 1 yellow dye -> 1 sponge
 - 1 dropper + 3 sticks + 3 string -> 1 dispenser
+- 3 purpur slabs + 2 chorus fruit -> 1 shulker shell
 
 ### Dropped seed planting
 Automatically plants seed dropped on tilled soil.
@@ -42,9 +43,5 @@ When breaking crops with a hoe you break a range around them. This drastically s
 
 ### Lily pad growing
 When right-clicking a lily pad with bone meal it wil grow new lily pads around the one that was clicked.
-
-## Planned tweaks
-- Dynamite
-- Sign editing
 
 

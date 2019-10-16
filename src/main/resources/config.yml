@@ -12,6 +12,7 @@ crafting-tweaks:
     dragons-breath: true
     sponge: true
     dispenser: true
+    shulker-shell: true
 
 seed-drop-planting:
     enabled: true

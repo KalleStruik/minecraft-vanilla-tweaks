@@ -21,6 +21,7 @@ public class config {
     public static boolean CRAFTING_TWEAKS_DRAGONS_BREATH;
     public static boolean CRAFTING_TWEAKS_SPONGE;
     public static boolean CRAFTING_TWEAKS_DISPENSER;
+    public static boolean CRAFTING_TWEAKS_SHULKER_SHELL;
 
     public static boolean SEED_DROP_PLANTING_ENABLED;
 
@@ -57,6 +58,7 @@ public class config {
         CRAFTING_TWEAKS_DRAGONS_BREATH = config.getBoolean("crafting-tweaks.dragons-breath");
         CRAFTING_TWEAKS_SPONGE = config.getBoolean("crafting-tweaks.sponge");
         CRAFTING_TWEAKS_DISPENSER = config.getBoolean("crafting-tweaks.dispenser");
+        CRAFTING_TWEAKS_SHULKER_SHELL = config.getBoolean("çrafting-tweaks.shulker-shell")
 
         SEED_DROP_PLANTING_ENABLED = config.getBoolean("seed-drop-planting.enabled");
 
