@@ -44,4 +44,7 @@ When breaking crops with a hoe you break a range around them. This drastically s
 ### Lily pad growing
 When right-clicking a lily pad with bone meal it wil grow new lily pads around the one that was clicked.
 
+## Planned tweaks
+See trello board: https://trello.com/b/m4jXPj5F/vanillatweaks-minecraft-plugin
+
 
