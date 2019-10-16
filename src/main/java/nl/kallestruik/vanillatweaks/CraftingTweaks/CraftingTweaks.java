@@ -73,6 +73,13 @@ public class CraftingTweaks {
         dispenserRecipe.setIngredient('D', Material.DROPPER);
         dispenserRecipe.setIngredient('S', Material.STRING);
 
+        // Shulker Shell
+        NamespacedKey shulkerShellKey = new NamespacedKey(plugin, "shulker_shell");
+        ShapedRecipe shulkerShellRecipe = new ShapedRecipe(shulkerShellKey, new ItemStack(Material.SHULKER_SHELL));
+        shulkerShellRecipe.shape("BBB","F F");
+        shulkerShellRecipe.setIngredient('B', Material.PURPUR_SLAB);
+        shulkerShellRecipe.setIngredient('F', Material.POPPED_CHORUS_FRUIT);
+
 
 
         // Add recipes
@@ -85,5 +92,6 @@ public class CraftingTweaks {
         if (config.CRAFTING_TWEAKS_DRAGONS_BREATH) plugin.getServer().addRecipe(dragonBreathRecipe);
         if (config.CRAFTING_TWEAKS_SPONGE) plugin.getServer().addRecipe(spongeRecipe);
         if (config.CRAFTING_TWEAKS_DISPENSER) plugin.getServer().addRecipe(dispenserRecipe);
+        if (config.CRAFTING_TWEAKS_SHULKER_SHELL) plugin.getServer().addRecipe(shulkerShellRecipe);
     }
 }
