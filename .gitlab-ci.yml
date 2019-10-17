@@ -23,6 +23,7 @@ build:
     expire_in: 1 week
   only:
     - master
+    - merge_requests
 
 after_script:
 - echo "End CI"
