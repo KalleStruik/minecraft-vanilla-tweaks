@@ -46,5 +46,3 @@ When right-clicking a lily pad with bone meal it wil grow new lily pads around t
 
 ## Planned tweaks
 See trello board: https://trello.com/b/m4jXPj5F/vanillatweaks-minecraft-plugin
-
-
