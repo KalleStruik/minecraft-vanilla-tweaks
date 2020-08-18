@@ -2,6 +2,7 @@ package nl.kallestruik.vanillatweaks;
 
 import nl.kallestruik.vanillatweaks.ArmorStandSwapping.ArmorStandSwappingHandler;
 import nl.kallestruik.vanillatweaks.CraftingTweaks.CraftingTweaks;
+import nl.kallestruik.vanillatweaks.DispenserTweaks.DispenserTweaksHandler;
 import nl.kallestruik.vanillatweaks.HoeHarvesting.HoeHarvestingHandler;
 import nl.kallestruik.vanillatweaks.LilypadGrowing.LilypadGrowingHandler;
 import nl.kallestruik.vanillatweaks.NetherSpongeDrying.NetherSpongeHandler;
@@ -19,7 +20,7 @@ public final class VanillaTweaks extends JavaPlugin {
     @Override
     public void onEnable() {
         try {
-            // Config loading
+            // Load the config from disk.
             config.load(new File(this.getDataFolder(), c.CONFIG_FILE_NAME));
 
             if (config.TOGGLE_TRAMPLE_ENABLED) {
@@ -52,10 +53,10 @@ public final class VanillaTweaks extends JavaPlugin {
                 getServer().getPluginManager().registerEvents(new LilypadGrowingHandler(), this);
             }
 
-
+            getServer().getPluginManager().registerEvents(new DispenserTweaksHandler(), this);
 
         } catch (IOException | InvalidConfigurationException | NullPointerException e) {
-            util.printException(e);
+            Util.printException(e);
         }
     }
 
@@ -64,7 +65,7 @@ public final class VanillaTweaks extends JavaPlugin {
         try {
             TrampleHandler.saveTrampleEnabled(new File(this.getDataFolder(), c.TRAMPLE_ENABLED_FILE_NAME));
         } catch (IOException | InvalidConfigurationException | NullPointerException e) {
-            util.printException(e);
+            Util.printException(e);
         }
     }
 }

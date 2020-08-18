@@ -38,11 +38,13 @@ public class config {
 
     public static boolean LILYPAD_GROWING_ENABLED;
 
+    public static boolean DISPENSERS_CAN_PLACE_SAPLINGS;
+
     public static void load(File file) throws IOException, InvalidConfigurationException {
         if (!file.getParentFile().exists())
             file.getParentFile().mkdirs();
         if (!file.exists())
-            util.ExportResource(c.CONFIG_FILE_NAME, file);
+            Util.exportResource(c.CONFIG_FILE_NAME, file);
         YamlConfiguration config = new YamlConfiguration();
         config.load(file);
 
@@ -74,6 +76,8 @@ public class config {
         HOE_HARVESTING_RANGE_DIAMOND = config.getInt("hoe-harvesting.ranges.diamond");
 
         LILYPAD_GROWING_ENABLED = config.getBoolean("lilypad-growing.enabled");
+
+        DISPENSERS_CAN_PLACE_SAPLINGS = config.getBoolean("dispenser-tweaks.place-saplings");
 
     }
 }
