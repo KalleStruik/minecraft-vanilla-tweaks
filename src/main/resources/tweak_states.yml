@@ -1,0 +1,16 @@
+CraftableNametag: true
+CraftableSaddle: true
+AlternativeDispenserRecipe: true
+DispensersCanPlantSaplings: true
+CraftableShulkerShell: true
+IceDecompression: true
+LogToChests: true
+CraftableSponge: true
+PlayersCantTrampleCrops: true
+WoolToString: true
+LilypadBonemealing: true
+SeedDropPlanting: true
+MobsCantTrampleCrops: true
+CraftableDragonsBreath: true
+ArmorSwapping: true
+HoesHarvestArea: true

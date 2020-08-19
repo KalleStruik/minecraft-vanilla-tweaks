@@ -16,11 +16,12 @@ repositories {
         name = 'sonatype'
         url = 'https://oss.sonatype.org/content/groups/public/'
     }
+    mavenLocal()
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile 'org.spigotmc:spigot-api:1.14.4-R0.1-SNAPSHOT'
+    compile 'org.spigotmc:spigot:1.16.1-R0.1-SNAPSHOT'
 }
 
 import org.apache.tools.ant.filters.ReplaceTokens

@@ -1,14 +1,44 @@
-package nl.kallestruik.vanillatweaks.ArmorStandSwapping;
+package nl.kallestruik.vanillatweaks.tweaks.miscellaneoustweaks;
 
+import nl.kallestruik.vanillatweaks.core.Tweak;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractAtEntityEvent;
 import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.java.JavaPlugin;
 
-public class ArmorStandSwappingHandler implements Listener {
+public class ArmorStandArmorSwapping implements Tweak, Listener {
+    private JavaPlugin plugin;
+
+    @Override
+    public String getIdentifier() {
+        return "ArmorSwapping";
+    }
+
+    @Override
+    public void onRegister(JavaPlugin pluginInstance) {
+        this.plugin = pluginInstance;
+    }
+
+    @Override
+    public void onUnRegister() {
+
+    }
+
+    @Override
+    public void onEnable() {
+        plugin.getServer().getPluginManager().registerEvents(this, plugin);
+
+    }
+
+    @Override
+    public void onDisable() {
+        HandlerList.unregisterAll(this);
+    }
 
     @EventHandler
     public void onClickEntity(PlayerInteractAtEntityEvent event) {

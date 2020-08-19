@@ -1,16 +1,44 @@
-package nl.kallestruik.vanillatweaks.HoeHarvesting;
+package nl.kallestruik.vanillatweaks.tweaks.miscellaneoustweaks;
 
-import nl.kallestruik.vanillatweaks.config;
+import nl.kallestruik.vanillatweaks.core.Tweak;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.data.Ageable;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.java.JavaPlugin;
 
-public class HoeHarvestingHandler implements Listener {
+public class HoesHarvestArea implements Tweak, Listener {
+    private JavaPlugin plugin;
+
+    @Override
+    public String getIdentifier() {
+        return "HoesHarvestArea";
+    }
+
+    @Override
+    public void onRegister(JavaPlugin pluginInstance) {
+        this.plugin = pluginInstance;
+    }
+
+    @Override
+    public void onUnRegister() {
+
+    }
+
+    @Override
+    public void onEnable() {
+        plugin.getServer().getPluginManager().registerEvents(this, plugin);
+    }
+
+    @Override
+    public void onDisable() {
+        HandlerList.unregisterAll(this);
+    }
 
     @EventHandler
     public void onHoeBreaksBlock(BlockBreakEvent event) {
@@ -21,15 +49,17 @@ public class HoeHarvestingHandler implements Listener {
         int range;
 
         if (itemInHand.getType() == Material.WOODEN_HOE)
-            range = config.HOE_HARVESTING_RANGE_WOOD;
+            range = 1;
         else if (itemInHand.getType() == Material.STONE_HOE)
-            range = config.HOE_HARVESTING_RANGE_STONE;
+            range = 1;
         else if (itemInHand.getType() == Material.IRON_HOE)
-            range = config.HOE_HARVESTING_RANGE_IRON;
+            range = 1;
         else if (itemInHand.getType() == Material.GOLDEN_HOE)
-            range = config.HOE_HARVESTING_RANGE_GOLD;
+            range = 1;
         else if (itemInHand.getType() == Material.DIAMOND_HOE)
-            range = config.HOE_HARVESTING_RANGE_DIAMOND;
+            range = 2;
+        else if (itemInHand.getType() == Material.NETHERITE_HOE)
+            range = 2;
         else
             return;
 

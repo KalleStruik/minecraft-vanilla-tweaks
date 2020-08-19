@@ -1,16 +1,36 @@
-package nl.kallestruik.vanillatweaks.SeedDropPlanting;
+package nl.kallestruik.vanillatweaks.tweaks.miscellaneoustweaks;
 
+import nl.kallestruik.vanillatweaks.core.Tweak;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Item;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitTask;
 
 
-public class SeedDropPlanting {
+public class SeedDropPlanting implements Tweak {
+    private JavaPlugin plugin;
+    private BukkitTask task = null;
 
-    public static void init(JavaPlugin plugin) {
-        Bukkit.getScheduler().runTaskTimer(plugin, () -> {
+    @Override
+    public String getIdentifier() {
+        return "SeedDropPlanting";
+    }
+
+    @Override
+    public void onRegister(JavaPlugin pluginInstance) {
+        this.plugin = pluginInstance;
+    }
+
+    @Override
+    public void onUnRegister() {
+
+    }
+
+    @Override
+    public void onEnable() {
+        task = Bukkit.getScheduler().runTaskTimer(plugin, () -> {
             for (World world : plugin.getServer().getWorlds()) {
                 for (Entity entity : world.getEntities()) {
                     if (entity instanceof Item) {
@@ -44,6 +64,14 @@ public class SeedDropPlanting {
                 }
             }
         }, 20 * 10, 20 * 10);
+    }
+
+    @Override
+    public void onDisable() {
+        if (task == null)
+            return;
+
+        task.cancel();
     }
 
     private static void plantSeed(Item entity, World world, Block block, Material material) {

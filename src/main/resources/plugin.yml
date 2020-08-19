@@ -1,6 +1,7 @@
 name: VanillaTweaks
 version: @version@
 main: nl.kallestruik.vanillatweaks.VanillaTweaks
-api-version: 1.13
+api-version: 1.16
 commands:
     toggletrample:
+    player:

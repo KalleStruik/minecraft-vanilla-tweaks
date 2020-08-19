@@ -1,17 +1,46 @@
-package nl.kallestruik.vanillatweaks.LilypadGrowing;
+package nl.kallestruik.vanillatweaks.tweaks.miscellaneoustweaks;
 
-import nl.kallestruik.vanillatweaks.util;
+import nl.kallestruik.vanillatweaks.util.Util;
+import nl.kallestruik.vanillatweaks.core.Tweak;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.java.JavaPlugin;
 
-public class LilypadGrowingHandler implements Listener {
+public class LilypadBonemealing implements Tweak, Listener {
+    private JavaPlugin plugin;
+
+    @Override
+    public String getIdentifier() {
+        return "LilypadBonemealing";
+    }
+
+    @Override
+    public void onRegister(JavaPlugin pluginInstance) {
+        this.plugin = pluginInstance;
+    }
+
+    @Override
+    public void onUnRegister() {
+
+    }
+
+    @Override
+    public void onEnable() {
+        plugin.getServer().getPluginManager().registerEvents(this, plugin);
+    }
+
+    @Override
+    public void onDisable() {
+        HandlerList.unregisterAll(this);
+    }
 
     @EventHandler
     public void onRightClickBlock(PlayerInteractEvent event) {
@@ -35,7 +64,7 @@ public class LilypadGrowingHandler implements Listener {
         World world = event.getClickedBlock().getWorld();
         Location origin = event.getClickedBlock().getLocation();
         for (int i = 0; i <= 5; i++) {
-            Location newPos = origin.clone().add(util.getRandomLocationOffset(0, 3, false));
+            Location newPos = origin.clone().add(Util.getRandomLocationOffset(0, 3, false));
             Block newBlock = world.getBlockAt(newPos);
             if (newBlock.getType() != Material.AIR)
                 continue;

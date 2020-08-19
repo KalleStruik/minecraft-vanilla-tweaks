@@ -1,5 +1,6 @@
-package nl.kallestruik.vanillatweaks.ToggleTrample;
+package nl.kallestruik.vanillatweaks.commands;
 
+import nl.kallestruik.vanillatweaks.tweaks.croptweaks.PlayersCantTrampleCrops;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -17,10 +18,10 @@ public class CommandToggletrample implements CommandExecutor {
 
         Player player = (Player) sender;
 
-        if (TrampleHandler.trampleEnabled.remove(player.getUniqueId())) {
+        if (PlayersCantTrampleCrops.trampleEnabled.remove(player.getUniqueId())) {
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&2Crop Trampling: &2&lEnabled"));
         } else {
-            TrampleHandler.trampleEnabled.add(player.getUniqueId());
+            PlayersCantTrampleCrops.trampleEnabled.add(player.getUniqueId());
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&2Crop Trampling: &4&lDisabled"));
         }
         return true;
