@@ -12,7 +12,7 @@ public class LogsToChests implements Tweak {
 
     @Override
     public String getIdentifier() {
-        return "LogToChests";
+        return "LogsToChests";
     }
 
     @Override
