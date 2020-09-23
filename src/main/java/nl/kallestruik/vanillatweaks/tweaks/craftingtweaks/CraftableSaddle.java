@@ -1,6 +1,7 @@
 package nl.kallestruik.vanillatweaks.tweaks.craftingtweaks;
 
 import nl.kallestruik.vanillatweaks.core.Tweak;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
@@ -33,6 +34,8 @@ public class CraftableSaddle implements Tweak {
         saddleRecipe.setIngredient('L', Material.LEATHER);
         saddleRecipe.setIngredient('S', Material.STRING);
         saddleRecipe.setIngredient('I', Material.IRON_INGOT);
+
+        Bukkit.getServer().addRecipe(saddleRecipe);
     }
 
     @Override

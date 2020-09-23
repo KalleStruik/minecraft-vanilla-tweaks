@@ -14,3 +14,4 @@ MobsCantTrampleCrops: true
 CraftableDragonsBreath: true
 ArmorSwapping: true
 HoesHarvestArea: true
+FakePlayers: false

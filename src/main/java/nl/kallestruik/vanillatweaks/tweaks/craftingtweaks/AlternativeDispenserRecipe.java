@@ -1,6 +1,7 @@
 package nl.kallestruik.vanillatweaks.tweaks.craftingtweaks;
 
 import nl.kallestruik.vanillatweaks.core.Tweak;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
@@ -33,6 +34,8 @@ public class AlternativeDispenserRecipe implements Tweak {
         dispenserRecipe.setIngredient('T', Material.STICK);
         dispenserRecipe.setIngredient('D', Material.DROPPER);
         dispenserRecipe.setIngredient('S', Material.STRING);
+
+        Bukkit.getServer().addRecipe(dispenserRecipe);
     }
 
     @Override

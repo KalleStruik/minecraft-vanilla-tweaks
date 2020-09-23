@@ -1,4 +1,4 @@
-package nl.kallestruik.vanillatweaks.tweaks.miscellaneoustweaks;
+package nl.kallestruik.vanillatweaks.tweaks.croptweaks;
 
 import nl.kallestruik.vanillatweaks.util.Util;
 import nl.kallestruik.vanillatweaks.core.Tweak;

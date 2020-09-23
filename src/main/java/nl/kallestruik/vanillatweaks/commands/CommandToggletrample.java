@@ -19,10 +19,10 @@ public class CommandToggletrample implements CommandExecutor {
         Player player = (Player) sender;
 
         if (PlayersCantTrampleCrops.trampleEnabled.remove(player.getUniqueId())) {
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&2Crop Trampling: &2&lEnabled"));
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&2Crop Trampling: &4&lDisabled"));
         } else {
             PlayersCantTrampleCrops.trampleEnabled.add(player.getUniqueId());
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&2Crop Trampling: &4&lDisabled"));
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&2Crop Trampling: &2&lEnabled"));
         }
         return true;
     }

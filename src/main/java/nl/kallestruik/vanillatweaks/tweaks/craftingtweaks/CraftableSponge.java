@@ -1,6 +1,7 @@
 package nl.kallestruik.vanillatweaks.tweaks.craftingtweaks;
 
 import nl.kallestruik.vanillatweaks.core.Tweak;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
@@ -32,6 +33,8 @@ public class CraftableSponge implements Tweak {
         spongeRecipe.shape("KKK","KDK","KKK");
         spongeRecipe.setIngredient('K', Material.KELP);
         spongeRecipe.setIngredient('D', Material.YELLOW_DYE);
+
+        Bukkit.getServer().addRecipe(spongeRecipe);
     }
 
     @Override

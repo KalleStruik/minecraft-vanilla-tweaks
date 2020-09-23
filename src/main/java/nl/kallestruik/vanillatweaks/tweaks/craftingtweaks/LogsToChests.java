@@ -1,6 +1,7 @@
 package nl.kallestruik.vanillatweaks.tweaks.craftingtweaks;
 
 import nl.kallestruik.vanillatweaks.core.Tweak;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
@@ -32,6 +33,8 @@ public class LogsToChests implements Tweak {
         ShapedRecipe chestRecipe = new ShapedRecipe(chestKey, new ItemStack(Material.CHEST, 4));
         chestRecipe.shape("WWW", "W W", "WWW");
         chestRecipe.setIngredient('W', MaterialGroups.ALL_LOG);
+
+        Bukkit.getServer().addRecipe(chestRecipe);
     }
 
     @Override

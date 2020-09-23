@@ -1,6 +1,7 @@
 package nl.kallestruik.vanillatweaks.tweaks.craftingtweaks;
 
 import nl.kallestruik.vanillatweaks.core.Tweak;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
@@ -32,6 +33,8 @@ public class CraftableShulkerShell implements Tweak {
         shulkerShellRecipe.shape("BBB","F F");
         shulkerShellRecipe.setIngredient('B', Material.PURPUR_SLAB);
         shulkerShellRecipe.setIngredient('F', Material.POPPED_CHORUS_FRUIT);
+
+        Bukkit.getServer().addRecipe(shulkerShellRecipe);
     }
 
     @Override

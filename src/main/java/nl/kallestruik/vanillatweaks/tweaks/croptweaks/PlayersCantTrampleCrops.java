@@ -67,6 +67,9 @@ public class PlayersCantTrampleCrops implements Tweak, Listener {
         if (!(event.getEntity() instanceof Player))
             return;
 
+        if (trampleEnabled.contains(event.getEntity().getUniqueId()))
+            return;
+
         event.setCancelled(true);
     }
 
