@@ -88,6 +88,7 @@ public class FakePlayer extends EntityPlayer {
                 instance.playerConnection.a(x, y, z, (float) yaw, (float) pitch);
                 // Set the fake player's world to the new world.
                 instance.playerInteractManager.world = worldServer;
+                instance.teleportTo(worldServer, new BlockPosition(x, y, z));
             }
 
             /// Set the fake players health to max.
